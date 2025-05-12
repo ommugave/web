@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Mugave PureAir Purifiers - Clean Air, Healthy Life</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  /* Reset and base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f6faff;
+    color: #222;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  a {
+    text-decoration: none;
+    color: #0D6EFD;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #084298;
+  }
+  header {
+    background: #0d6efd;
+    padding: 15px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  nav {
+    display: flex;
+    gap: 15px;
+  }
+  nav a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    user-select: none;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  .hero p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+  .hero button {
+    background-color: #ffc107;
+    color: #0056b3;
+    font-weight: 600;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgb(255 193 7 / 0.4);
+    transition: background-color 0.3s ease;
+  }
+  .hero button:hover {
+    background-color: #e0a800;
+  }
+  
+  /* Features Section */
+  .features {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(13 110 253 / 0.1);
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    text-align: center;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+  }
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    stroke: #0d6efd;
+    stroke-width: 1.5;
+    fill: none;
+  }
+  .feature-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #0d6efd;
+  }
+  .feature-desc {
+    color: #495057;
+    font-size: 0.9rem;
+  }
+
+  /* Products Section */
+  .section-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+    color: #0d6efd;
+    text-align: center;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgb(13 110 253 / 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgb(13 110 253 / 0.25);
+  }
+  .product-card img {
+    width: 100%;
+    max-width: 140px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    object-fit: contain;
+  }
+  .product-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #212529;
+    text-align: center;
+  }
+  .product-desc {
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 10px;
+    flex-grow: 1;
+  }
+  .product-price {
+    color: #198754;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+
+  /* About Section */
+  .about {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgb(13 110 253 / 0.1);
+    margin-bottom: 30px;
+  }
+  .about p {
+    font-size: 1rem;
+    color: #343a40;
+    line-height: 1.5;
+  }
+
+  /* Contact Section */
+  .contact {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgb(13 110 253 / 0.1);
+  }
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #0d6efd;
+  }
+  .contact input,
+  .contact textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid #ced4da;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+  }
+  .contact input:focus,
+  .contact textarea:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 8px rgb(13 110 253 / 0.25);
+  }
+  .contact textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  .contact button {
+    background-color: #0d6efd;
+    color: white;
+    font-weight: 600;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+  }
+  .contact button:hover {
+    background-color: #0a58ca;
+  }
+
+  /* Footer */
+  footer {
+    background: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 400px) {
+    header h1 {
+      font-size: 1.1rem;
+    }
+    nav a {
+      font-size: 0.9rem;
+    }
+    .hero h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Mugave PureAir Purifiers</h1>
+  <nav>
+    <a href="#home" onclick="scrollToSection('home')">Home</a>
+    <a href="#features" onclick="scrollToSection('features')">Features</a>
+    <a href="#products" onclick="scrollToSection('products')">Products</a>
+    <a href="#about" onclick="scrollToSection('about')">About</a>
+    <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="home" role="banner" aria-label="Hero Section">
+    <h2>Breathe Pure. Live Better.</h2>
+    <p>Discover our top-rated air purifiers to keep your home and office fresh and healthy.</p>
+    <button onclick="scrollToSection('products')">Shop Now</button>
+  </section>
+
+  <section class="features" id="features" aria-labelledby="features-title">
+    <h2 class="section-title" id="features-title" style="text-align:center; grid-column: 1 / -1; margin-bottom: 25px;">Why Choose Our Purifiers?</h2>
+
+    <article class="feature" role="article" tabindex="0" aria-label="High Efficiency Filtration">
+      <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+      <h3 class="feature-title">High Efficiency Filtration</h3>
+      <p class="feature-desc">Remove 99.97% of airborne particles including dust, pollen, and allergens.</p>
+    </article>
+
+    <article class="feature" role="article" tabindex="0" aria-label="Smart Controls and Monitoring">
+      <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 3h0a4 4 0 0 1 0 8h0"/></svg>
+      <h3 class="feature-title">Smart Controls & Monitoring</h3>
+      <p class="feature-desc">Wi-Fi enabled app and voice control for convenient air quality management.</p>
+    </article>
+
+    <article class="feature" role="article" tabindex="0" aria-label="Energy Saving and Eco Friendly">
+      <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-4 4-4-4-4 4-4-4v7c0 6 8 10 8 10z"/></svg>
+      <h3 class="feature-title">Energy Saving & Eco-Friendly</h3>
+      <p class="feature-desc">Low power consumption with environment-friendly materials and design.</p>
+    </article>
+
+    <article class="feature" role="article" tabindex="0" aria-label="Whisper Quiet Operation">
+      <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 9v6h4l5 5V4L6 9H2z"/></svg>
+      <h3 class="feature-title">Whisper-Quiet Operation</h3>
+      <p class="feature-desc">Ultra-quiet motors let you enjoy fresh air without the noise.</p>
+    </article>
+  </section>
+
+  <section id="products" aria-labelledby="products-title">
+    <h2 class="section-title" id="products-title">Our Top Purifiers</h2>
+    <div class="products" role="list">
+      <article class="product-card" role="listitem" tabindex="0" aria-label="PureAir Pro">
+        <img src="https://cdn.pixabay.com/photo/2018/04/01/19/41/air-purifier-3282523_1280.png" alt="PureAir Pro air purifier" />
+        <h3 class="product-name">PureAir Pro</h3>
+        <p class="product-desc">Advanced HEPA filtration with smart air quality sensors and app control.</p>
+        <div class="product-price">$199</div>
+      </article>
+      <article class="product-card" role="listitem" tabindex="0" aria-label="EcoBreeze Compact">
+        <img src="https://cdn.pixabay.com/photo/2017/06/20/20/36/air-purifier-2422369_1280.png" alt="EcoBreeze Compact air purifier" />
+        <h3 class="product-name">EcoBreeze Compact</h3>
+        <p class="product-desc">Compact & energy efficient, perfect for small rooms and offices.</p>
+        <div class="product-price">$129</div>
+      </article>
+      <article class="product-card" role="listitem" tabindex="0" aria-label="NanoClean 360">
+        <img src="https://cdn.pixabay.com/photo/2014/12/03/19/57/air-purifier-557116_1280.png" alt="NanoClean 360 air purifier" />
+        <h3 class="product-name">NanoClean 360</h3>
+        <p class="product-desc">360° purification with UV sterilization and odor removal technology.</p>
+        <div class="product-price">$249</div>
+      </article>
+
+      <article class="product-card" role="listitem" tabindex="0" aria-label="AirGuard Max">
+        <img src="https://cdn.pixabay.com/photo/2019/01/16/14/23/air-cleaner-3935190_1280.png" alt="AirGuard Max air purifier" />
+        <h3 class="product-name">AirGuard Max</h3>
+        <p class="product-desc">Powerful triple filter system with ionizer for ultimate air purification.</p>
+        <div class="product-price">$279</div>
+      </article>
+      <article class="product-card" role="listitem" tabindex="0" aria-label="FreshWave Mini">
+        <img src="https://cdn.pixabay.com/photo/2020/09/03/19/53/air-purifier-5545523_1280.png" alt="FreshWave Mini portable air purifier" />
+        <h3 class="product-name">FreshWave Mini</h3>
+        <p class="product-desc">Portable, USB-powered, ideal for cars, desks, and small spaces.</p>
+        <div class="product-price">$79</div>
+      </article>
+      <article class="product-card" role="listitem" tabindex="0" aria-label="PureSense Ultra">
+        <img src="https://cdn.pixabay.com/photo/2017/04/20/15/14/air-purifier-2245179_1280.png" alt="PureSense Ultra air purifier" />
+        <h3 class="product-name">PureSense Ultra</h3>
+        <p class="product-desc">Large room purifier with smart voice control and eco-friendly design.</p>
+        <div class="product-price">$329</div>
+      </article>
+    </div>
+  </section>
+  <section class="about" id="about" aria-labelledby="about-title">
+    <h2 class="section-title" id="about-title">About PureAir</h2>
+    <p>
+      PureAir Purifiers has been dedicated to providing cleaner air solutions for over 10 years. Our mission is to enhance your quality of life by delivering high-performance, eco-friendly, and stylish purifiers designed to fit your lifestyle. We are committed to innovation, sustainability, and customer satisfaction.
+    </p>
+  </section>
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 class="section-title" id="contact-title">Contact Us</h2>
+    <form id="contact-form" aria-label="Contact form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required aria-required="true" />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required aria-required="true" />
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message" required aria-required="true"></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="form-status" role="alert" aria-live="polite" style="margin-top:10px;color:#198754;font-weight:600;display:none;"></p>
+  </section>
+</main>
+<footer>
+  &copy; 2024 Mugave PureAir Purifiers. All rights reserved.
+</footer>
+<script>
+  // Smooth scroll to section
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Contact form submit handler (dummy for now)
+  document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const status = document.getElementById('form-status');
+    status.style.display = 'none';
+
+    // Simulate sending
+    setTimeout(() => {
+      status.textContent = 'Thank you for contacting us. We will get back to you soon!';
+      status.style.display = 'block';
+      this.reset();
+    }, 1000);
+  });
+
+  // Ensure page fits in 600px height on mobile without scrolling
+  // We rely on modern viewport and flexible layouts for this
+
+</script>
+</body>
+</html>
